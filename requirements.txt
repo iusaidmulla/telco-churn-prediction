@@ -1,0 +1,16 @@
+# Python 3.10 - 3.14 (developed and tested on 3.13).
+# Versions are pinned on purpose: the trained model is a joblib pickle, which is
+# only guaranteed to load with the scikit-learn / xgboost it was trained with.
+# numpy and scipy have no Python 3.14 wheels at these versions, hence the markers.
+numpy==2.2.6; python_version < "3.14"
+numpy==2.3.5; python_version >= "3.14"
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.15.3; python_version < "3.14"
+scipy==1.16.3; python_version >= "3.14"
+xgboost==3.0.5
+joblib==1.5.2
+matplotlib==3.10.7
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5

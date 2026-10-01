@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+*.log
+# smoke-test output from `python train.py --quick`
+models_quick/
+reports_quick/
