@@ -1,0 +1,87 @@
+{
+  "model_name": "xgboost_tuned",
+  "package_version": "1.0.0",
+  "trained_at": "2026-09-30T18:01:30+00:00",
+  "target": "Churn",
+  "positive_label": "Yes",
+  "features": [
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "SeniorCitizen",
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "decision_threshold": 0.34,
+  "threshold_rule": "maximises F1 on out-of-fold predictions of the training split",
+  "best_params": {
+    "model__colsample_bytree": 0.7830186052470381,
+    "model__learning_rate": 0.015366773866473912,
+    "model__max_depth": 3,
+    "model__min_child_weight": 9,
+    "model__n_estimators": 434,
+    "model__reg_lambda": 0.7672295788949258,
+    "model__subsample": 0.618401056808701
+  },
+  "cv_metrics": {
+    "cv_roc_auc_mean": 0.8500739100758417,
+    "cv_roc_auc_std": 0.013127167481125678,
+    "cv_pr_auc_mean": 0.6707243115954958,
+    "cv_pr_auc_std": 0.022579531418339786
+  },
+  "test_metrics": {
+    "roc_auc": 0.8495014079413058,
+    "pr_auc": 0.6700952814515946,
+    "f1": 0.6344827586206897,
+    "precision": 0.5564516129032258,
+    "recall": 0.7379679144385026,
+    "accuracy": 0.7743080198722498,
+    "balanced_accuracy": 0.7627037639825364,
+    "brier": 0.13400706280910188,
+    "threshold": 0.34,
+    "tn": 815,
+    "fp": 220,
+    "fn": 98,
+    "tp": 276
+  },
+  "test_intervals_95": {
+    "roc_auc": [
+      0.8279161039831849,
+      0.869896169179186
+    ],
+    "pr_auc": [
+      0.6171764501221134,
+      0.7181736283966972
+    ],
+    "f1": [
+      0.5945268467295802,
+      0.6703923268188058
+    ]
+  },
+  "n_train": 5634,
+  "n_test": 1409,
+  "train_churn_rate": 0.2653532126375577,
+  "random_state": 42,
+  "data_sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+  "versions": {
+    "python": "3.13.5",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.0.5",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "joblib": "1.5.2"
+  }
+}
